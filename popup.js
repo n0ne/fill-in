@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Загрузка сохраненных данных при открытии popup
-  chrome.storage.sync.get(['firstName', 'lastName', 'phoneNumber'], (data) => {
+  chrome.storage.sync.get(['firstName', 'lastName', 'email', 'phoneNumber'], (data) => {
     if (data.firstName) document.getElementById('firstName').value = data.firstName;
     if (data.lastName) document.getElementById('lastName').value = data.lastName;
     if (data.email) document.getElementById('email').value = data.email;

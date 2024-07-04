@@ -42,6 +42,18 @@ document.addEventListener('focusin', (event) => {
     ) {
       return;
     }
+
+    if (
+      (inputId === 'phone' || inputName === 'phone' || inputName === 'phoneNumber' || inputDataInput === 'phone_number') &&
+      chrome.storage.sync.get(['phoneNumber'], (data) => {
+        const suggestion = data.phoneNumber || '';
+        if (suggestion) {
+          showSuggestionPopup(inputElement, suggestion);
+        }
+      })
+    ) {
+      return;
+    }
   }
 });
 
