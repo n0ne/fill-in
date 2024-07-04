@@ -1,15 +1,22 @@
 document.addEventListener('focusin', (event) => {
-  if (event.target.tagName === 'INPUT' && (event.target.id === 'first_name' || event.target.name === 'name')) {
+  if (event.target.tagName === 'INPUT' && 
+    (
+      event.target.id === 'first_name' || 
+      event.target.id === 'firstName' ||
+      event.target.name === 'name' ||
+      event.target.name === 'firstName' ||
+      event.target.getAttribute('data-input') === 'first_name'
+    )) {
     const inputElement = event.target;
-    const inputId = inputElement.id;
-    const inputName = inputElement.name;
+    // const inputId = inputElement.id;
+    // const inputName = inputElement.name;
     
     // Получаем сохраненное значение из chrome.storage
     chrome.storage.sync.get(['firstName'], (data) => {
-      let suggestion = '';
-      if (inputId === 'first_name' || inputName === 'name') {
-        suggestion = data.firstName || '';
-      }
+      let suggestion = data.firstName || '';
+      // if (inputId === 'first_name' || inputName === 'name') {
+      //   suggestion = data.firstName || '';
+      // }
 
       if (suggestion) {
         showSuggestionPopup(inputElement, suggestion);
