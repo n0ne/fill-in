@@ -8,15 +8,29 @@ document.addEventListener('focusin', (event) => {
       event.target.getAttribute('data-input') === 'first_name'
     )) {
     const inputElement = event.target;
-    // const inputId = inputElement.id;
-    // const inputName = inputElement.name;
     
     // Получаем сохраненное значение из chrome.storage
     chrome.storage.sync.get(['firstName'], (data) => {
       let suggestion = data.firstName || '';
-      // if (inputId === 'first_name' || inputName === 'name') {
-      //   suggestion = data.firstName || '';
-      // }
+
+      if (suggestion) {
+        showSuggestionPopup(inputElement, suggestion);
+      }
+    });
+  }
+
+  if (event.target.tagName === 'INPUT' && 
+    (
+      event.target.id === 'email' || 
+      event.target.name === 'email' ||
+      event.target.type === 'email' ||
+      event.target.getAttribute('data-input') === 'email'
+    )) {
+    const inputElement = event.target;
+    
+    // Получаем сохраненное значение из chrome.storage
+    chrome.storage.sync.get(['email'], (data) => {
+      let suggestion = data.email || '';
 
       if (suggestion) {
         showSuggestionPopup(inputElement, suggestion);
