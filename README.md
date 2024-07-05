@@ -27,6 +27,15 @@ A Chrome extension that allows you to store and automatically fill personal info
 - **Ctrl+Shift+9**: Fill the email field.
 - **Ctrl+Shift+0**: Fill the LinkedIn profile URL field.
 
+
+## Screenshots
+- add information:
+  ![Fill In Popup](/icons/popup.png)
+- fill in name:
+  ![Fill In First Name](/icons/name-hint.png)
+- fill in email:
+  ![Fill In Email](/icons/email-hint.png)
+
 ## Requirements
 - Google Chrome browser with the extension installed.
 
