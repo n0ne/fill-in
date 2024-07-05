@@ -54,6 +54,18 @@ document.addEventListener('focusin', (event) => {
     ) {
       return;
     }
+
+    if (
+      (inputName === 'urls[Linkedin Profile]' || inputName === 'linkedinUrl' || inputName === 'urls[LinkedIn]' || inputDataInput === 'linkedin_link') &&
+      chrome.storage.sync.get(['linkedin'], (data) => {
+        const suggestion = data.linkedin || '';
+        if (suggestion) {
+          showSuggestionPopup(inputElement, suggestion);
+        }
+      })
+    ) {
+      return;
+    }
   }
 });
 

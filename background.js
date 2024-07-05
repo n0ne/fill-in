@@ -1,5 +1,5 @@
 chrome.commands.onCommand.addListener((command) => {
-  chrome.storage.sync.get(['firstName', 'lastName', 'phoneNumber'], (data) => {
+  chrome.storage.sync.get(['firstName', 'lastName', 'email', 'phoneNumber', 'linkedin'], (data) => {
     let message = "";
     switch (command) {
       case "fill-first-name":
@@ -11,11 +11,17 @@ chrome.commands.onCommand.addListener((command) => {
       case "fill-phone-number":
         message = data.phoneNumber || "";
         break;
+      case "fill-email":
+        message = data.email || "";
+        break;
+      case "fill-linkedin":
+        message = data.linkedin || "";
+        break;
     }
     if (message) {
-      chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
+      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
         chrome.scripting.executeScript({
-          target: {tabId: tabs[0].id},
+          target: { tabId: tabs[0].id },
           func: (text) => {
             document.activeElement.value = text;
           },
