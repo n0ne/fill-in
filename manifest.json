@@ -41,12 +41,6 @@
         "default": "Ctrl+Shift+9"
       },
       "description": "Fill the email"
-    },
-    "fill-linkedin": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+0"
-      },
-      "description": "Fill the LinkedIn"
     }
   },
   "icons": {

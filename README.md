@@ -25,7 +25,6 @@ A Chrome extension that allows you to store and automatically fill personal info
 - **Ctrl+Shift+7**: Fill the last name field.
 - **Ctrl+Shift+8**: Fill the phone number field.
 - **Ctrl+Shift+9**: Fill the email field.
-- **Ctrl+Shift+0**: Fill the LinkedIn profile URL field.
 
 
 ## Screenshots

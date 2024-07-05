@@ -14,9 +14,6 @@ chrome.commands.onCommand.addListener((command) => {
       case "fill-email":
         message = data.email || "";
         break;
-      case "fill-linkedin":
-        message = data.linkedin || "";
-        break;
     }
     if (message) {
       chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
