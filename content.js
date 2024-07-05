@@ -8,7 +8,7 @@ document.addEventListener('focusin', (event) => {
     const inputDataInput = inputElement.getAttribute('data-input');
 
     if (
-      (inputId === 'first_name' || inputId === 'firstName' || inputName === 'name' || inputName === 'firstName' || inputDataInput === 'first_name') &&
+      (inputId === 'first_name' || inputId === 'firstName' || inputName === 'name' || imputName === 'first_name' || inputName === 'firstName' || inputDataInput === 'first_name') &&
       chrome.storage.sync.get(['firstName'], (data) => {
         const suggestion = data.firstName || '';
         if (suggestion) {
