@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Fill In: Personal Info Storage",
-  "version": "1.0",
+  "version": "1.0.1",
   "description": "Store and auto-fill personal information.",
   "permissions": ["storage", "activeTab", "scripting"],
   "background": {
@@ -20,25 +20,25 @@
   "commands": {
     "fill-first-name": {
       "suggested_key": {
-        "default": "Ctrl+Shift+6"
+        "default": "Ctrl+Shift+7"
       },
       "description": "Fill the first name"
     },
     "fill-last-name": {
       "suggested_key": {
-        "default": "Ctrl+Shift+7"
+        "default": "Ctrl+Shift+8"
       },
       "description": "Fill the last name"
     },
     "fill-phone-number": {
       "suggested_key": {
-        "default": "Ctrl+Shift+8"
+        "default": "Ctrl+Shift+9"
       },
       "description": "Fill the phone number"
     },
     "fill-email": {
       "suggested_key": {
-        "default": "Ctrl+Shift+9"
+        "default": "Ctrl+Shift+0"
       },
       "description": "Fill the email"
     }

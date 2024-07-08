@@ -21,10 +21,10 @@ A Chrome extension that allows you to store and automatically fill personal info
    - Use hotkeys to quickly fill corresponding fields in the active tab.
 
 ## Commands
-- **Ctrl+Shift+6**: Fill the first name field.
-- **Ctrl+Shift+7**: Fill the last name field.
-- **Ctrl+Shift+8**: Fill the phone number field.
-- **Ctrl+Shift+9**: Fill the email field.
+- **Ctrl+Shift+7**: Fill the first name field.
+- **Ctrl+Shift+8**: Fill the last name field.
+- **Ctrl+Shift+9**: Fill the phone number field.
+- **Ctrl+Shift+0**: Fill the email field.
 
 
 ## Screenshots
