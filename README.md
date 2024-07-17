@@ -3,6 +3,9 @@
 ## Description
 A Chrome extension that allows you to store and automatically fill personal information.
 
+## Chrome Web Store 
+[Fill In: Personal Info Storage](https://chromewebstore.google.com/detail/kgkdoajmgaedbejehpfljfodkecldaec)
+
 ## Features
 - Store and auto-fill fields with personal information: first name, last name, email, phone number, LinkedIn URL.
 - Use hotkeys for quick filling of fields in the active tab.
